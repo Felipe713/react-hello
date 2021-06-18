@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -11,13 +11,19 @@ export function Home() {
 			<div id="trafficTop"></div>
 			<div id="container">
 				<div
-					className={`red $(color === === "red" ? "light" : "") `}
+					className={`semaforo red ${
+						color === "red" ? "light" : ""
+					} `}
 					onClick={() => setColor("red")}></div>
 				<div
-					className={`yellow $(color === === "yellow" ? "light" : "") `}
+					className={`semaforo yellow ${
+						color === "yellow" ? "light" : ""
+					} `}
 					onClick={() => setColor("yellow")}></div>
 				<div
-					className={`green $(color === === "green" ? "light" : "") `}
+					className={` semaforo green ${
+						color === "green" ? "light" : ""
+					} `}
 					onClick={() => setColor("green")}></div>
 			</div>
 		</div>
